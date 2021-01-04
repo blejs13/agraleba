@@ -1,0 +1,3 @@
+ng new 
+npm install -s jquery
+npm install -s bootstrap
