@@ -1,0 +1,11 @@
+<nav class="d-flex flex-column">
+    <div id="responsive-menu" class="d-flex justify-content-between p-3 ">  
+        <a href="tel:+48609474272" class="user-select-none">+48 609 474 272</a>
+        <span (click)="showNav()" id="hamburger" class="user-select-none">≡</span>
+    </div>
+    <div #nav id="menu" class="d-flex flex-column justify-content-center mx-auto d-none">
+        <a class="user-select-none mx-auto"  routerLink="/">Zielony Ogród</a>
+        <a class="user-select-none mx-auto" routerLink="/gallery">Galeria</a>
+        <a class="user-select-none mx-auto" routerLink="/contact">Kontakt</a>
+    </div>
+</nav>
