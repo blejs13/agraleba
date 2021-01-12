@@ -1,4 +1,4 @@
-import { Component, OnInit, Renderer2, ViewChild } from '@angular/core'
+import { Component, OnInit, Renderer2, TemplateRef, ViewChild, ViewContainerRef, ViewRef } from '@angular/core'
 import * as $ from "jquery"
 
 @Component({
@@ -8,19 +8,37 @@ import * as $ from "jquery"
 })
 export class NavigationComponent implements OnInit {
 
-
-  @ViewChild('nav') nav
-
   constructor(private renderer:Renderer2) { }
 
-  ngOnInit(): void {
+  ngOnInit(): void {}
+
+
+  showHideNav(){
+  
+
+    this.changeClassAngular()
+    this.addElementAngular()
   }
 
-  showNav(){
-    //$('#menu').addClass('bg-danger')
-    console.log(this.nav.nativeElement)
-    this.renderer.addClass(this.nav.nativeElement,"bg-danger")
-    this.renderer.removeClass(this.nav.nativeElement,"bg-danger")    
+
+
+
+
+  //test
+  @ViewChild('nav') navi
+  changeClassAngular(){
+    this.renderer.addClass(this.navi.nativeElement,"bg-danger")
+    this.renderer.removeClass(this.navi.nativeElement,"bg-danger")    
   }
 
+  @ViewChild('nav',{read:ViewContainerRef}) nav : ViewContainerRef
+  @ViewChild('template', { read: TemplateRef }) _template: TemplateRef<any>;
+  addElementAngular(){
+    let view: ViewRef = this._template.createEmbeddedView(null)
+    this.nav.insert(view)
+  }
+  
+  clearAngular(){
+    this.nav.clear()
+  }
 }

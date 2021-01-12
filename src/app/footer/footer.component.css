@@ -1,0 +1,36 @@
+footer{/*page footer*/
+	width: 100%;
+	min-height: 6em;
+	padding: 1em 0;
+	background: #111;
+	/*font*/
+	font-size: 0.9em;
+	color: #dbdbdb;
+	/*border*/
+	box-shadow:0 0 0.3em black;
+
+	z-index: 1;
+	
+}
+	#small_menu{/*small menu in footer*/
+		max-width:100%;
+		width:350px;
+		
+	}
+		#small_menu > *{
+			width: 100%;
+			text-align: center;
+			/*border*/
+			border-right:1px dotted #d6d6d6;
+			/* box-sizing: border-box; */
+			/*font*/
+			text-decoration: none;
+			color:#d6d6d6;
+		}
+		#small_menu>a:active{/*for finger tap*/
+			color:white;
+		}
+		#small_menu:nth-last-child(1){/*doted border for first element*/
+			/*border*/
+			border-left: 1px dotted #d6d6d6;
+		}
