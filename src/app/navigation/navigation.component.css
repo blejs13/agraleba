@@ -1,4 +1,13 @@
-nav{
-    
-    width: 100vw;;
+.nav-agra{
+    background:rgba( 255, 255, 255, .8);
+    position:fixed;
+    width: 100vw;
+    font-size: 1.1em;
+    box-shadow:0 0 0.3em black;
+    z-index: 100;
+}
+.nav-toggler-agra{
+    cursor: pointer;
+    border: none;
+    font-size: 2em;
 }

@@ -1,17 +1,20 @@
-<nav class="d-flex flex-column">
-    <div id="responsive-menu" class="d-flex justify-content-between p-3 ">  
-        <a href="tel:+48609474272" class="user-select-none">+48 609 474 272</a>
-        <span (click)="showNav()" id="hamburger" class="user-select-none">≡</span>
+<nav class="navbar navbar-expand-lg navbar-light nav-agra">
+    <a href="tel:+48609474272" class="font-weight-bold user-select-none text-dark">+48 609 474 272</a>
+    <span class="navbar-toggler nav-toggler-agra" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">≡</span>
+    <div #navlist class="collapse navbar-collapse mr-2" id="navbarNav">
+      <ul class="navbar-nav ml-auto">
+        <li class="nav-item active">
+          <a (click)="showHideNav()" class="nav-link" routerLink="/">Start</a>
+        </li>
+        <li class="nav-item active">
+          <a (click)="showHideNav()" class="nav-link" routerLink="/gallery">Galeria</a>
+        </li>
+        <li class="nav-item active">
+          <a (click)="showHideNav()" class="nav-link" routerLink="/contact">Kontakt</a>
+        </li>
+      </ul>
     </div>
-    <div #menu id="menu" class="d-flex flex-column justify-content-center mx-auto d-none">
-        <a class="user-select-none mx-auto"  routerLink="/">Zielony Ogród</a>
-        <a class="user-select-none mx-auto" routerLink="/gallery">Galeria</a>
-        <a class="user-select-none mx-auto" routerLink="/contact">Kontakt</a>
-    </div>
-</nav>
-
-
-
+  </nav>
 
 
 

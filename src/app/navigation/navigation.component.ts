@@ -12,33 +12,30 @@ export class NavigationComponent implements OnInit {
 
   ngOnInit(): void {}
 
-
+  @ViewChild('navlist') navlist
   showHideNav(){
+    this.renderer.removeClass(this.navlist.nativeElement,"show") 
+  }
+
+
+
+
+
+  // //test
+  // @ViewChild('nav') navi
+  // changeClassAngular(){
+  //   this.renderer.addClass(this.navi.nativeElement,"bg-danger")
+  //   this.renderer.removeClass(this.navi.nativeElement,"bg-danger")    
+  // }
+
+  // @ViewChild('nav',{read:ViewContainerRef}) nav : ViewContainerRef
+  // @ViewChild('template', { read: TemplateRef }) _template: TemplateRef<any>;
+  // addElementAngular(){
+  //   let view: ViewRef = this._template.createEmbeddedView(null)
+  //   this.nav.insert(view)
+  // }
   
-
-    this.changeClassAngular()
-    this.addElementAngular()
-  }
-
-
-
-
-
-  //test
-  @ViewChild('nav') navi
-  changeClassAngular(){
-    this.renderer.addClass(this.navi.nativeElement,"bg-danger")
-    this.renderer.removeClass(this.navi.nativeElement,"bg-danger")    
-  }
-
-  @ViewChild('nav',{read:ViewContainerRef}) nav : ViewContainerRef
-  @ViewChild('template', { read: TemplateRef }) _template: TemplateRef<any>;
-  addElementAngular(){
-    let view: ViewRef = this._template.createEmbeddedView(null)
-    this.nav.insert(view)
-  }
-  
-  clearAngular(){
-    this.nav.clear()
-  }
+  // clearAngular(){
+  //   this.nav.clear()
+  // }
 }

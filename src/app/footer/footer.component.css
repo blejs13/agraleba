@@ -1,36 +1,78 @@
-footer{/*page footer*/
-	width: 100%;
-	min-height: 6em;
-	padding: 1em 0;
-	background: #111;
-	/*font*/
-	font-size: 0.9em;
-	color: #dbdbdb;
-	/*border*/
-	box-shadow:0 0 0.3em black;
-
-	z-index: 1;
-	
+footer {
+  /*page footer*/
+  background: #131313;
 }
-	#small_menu{/*small menu in footer*/
-		max-width:100%;
-		width:350px;
-		
-	}
-		#small_menu > *{
-			width: 100%;
-			text-align: center;
-			/*border*/
-			border-right:1px dotted #d6d6d6;
-			/* box-sizing: border-box; */
-			/*font*/
-			text-decoration: none;
-			color:#d6d6d6;
-		}
-		#small_menu>a:active{/*for finger tap*/
-			color:white;
-		}
-		#small_menu:nth-last-child(1){/*doted border for first element*/
-			/*border*/
-			border-left: 1px dotted #d6d6d6;
-		}
+#small_menu > * {
+  border-left: 1px dotted #d6d6d6;
+}
+#small_menu > a:nth-last-child(1) {
+  /*doted border for first element*/
+  border-right: 1px dotted #d6d6d6;
+}
+#links {
+  background-color: #8a8a8a;
+}
+#map{
+	min-height: 280px;
+}
+footer {
+  width: 100vw;
+  padding: 0;
+  margin: 0;
+}
+.mapouter {
+  text-align: right;
+  height: 100%;
+  width: 100%;
+}
+
+.gmap_canvas {
+  overflow: hidden;
+  background: none !important;
+  height: 100%;
+  width: 100%;
+}
+
+#social img {
+  /*socialmedia icons*/
+  height: 4em;
+  /*border*/
+  border-radius: 10px;
+  /* box-sizing: border-box; */
+}
+#social a:nth-child(2) img {
+  height: 7em;
+}
+#social img:nth-child(2):active {
+  box-shadow: 0 0 0em #fff;
+}
+#social img:active {
+  /*for finger tap*/
+  box-shadow: 0 0 0.8em black;
+  /*border*/
+  border-radius: 20px;
+}
+
+@media only screen and (min-width: 900px) {
+  #social img {
+    /*socialmedia icons*/
+    height: 5em;
+    /*border*/
+    border-radius: 20px;
+    /* box-sizing: border-box; */
+  }
+  #social a:nth-child(2) img {
+    height: 9em;
+  }
+  #social img:nth-child(2):active {
+    box-shadow: 0 0 1em #666;
+    /*border*/
+    border-radius: 40px;
+  }
+  #social img:active {
+    /*for finger tap*/
+    box-shadow: 0 0 0.8em black;
+    /*border*/
+    border-radius: 30px;
+  }
+}

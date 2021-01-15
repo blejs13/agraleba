@@ -1,29 +1,49 @@
-<div id="more_info" class="column col_to_row">
-    <div id="links" class="column">
-        <div class="column">
-            <h4>Zapraszamy</h4>
-            <p>Zadzwoń, zarezerwuj i przyjedź do Łeby. Jesteśmy dostępni przez telefon, Booking oraz Airbnb.</p>
-        </div>
-        <div class="column">
-            <h4>Odwiedź również:</h4>
-            <a class="noSelect" href="http://www.lebskiechatki.pl">www.lebskiechatki.pl - Domki dla całej rodziny.</a>
-            <a class="noSelect" href="http://www.asartceramika.pl">www.asartceramika.pl - Piękna ceramika</a>       
+<div id="social" class="d-flex flex-row justify-content-around px-5 py-1 align-items-center">
+    <a class="noSelect" href="https://www.facebook.com/lebaagra/">
+        <img src="../assets/social/facebook-icon.png" alt="facebook">
+    </a>
+    <a class="noSelect" href="index.html">
+        <img src="../assets/logo/agra_logo.png" alt="agra_logo">
+    </a>
+    <a class="noSelect"
+        href="https://www.google.com/maps/place/Agra+Zielony+Ogrod/@54.7594252,17.5521492,15z/data=!4m8!3m7!1s0x46fe7833a601b577:0x276efb8998e16513!5m2!4m1!1i2!8m2!3d54.762329!4d17.556752">
+        <img src="../assets/social/googlemaps-icon.png" alt="google-maps">
+    </a>
+</div>
+<div #links id="links" class="row">
+    <div class="col-sm-12 col-md-4">
+        <div *ngIf="!this.app.home" class=" d-flex flex-column p-4 justify-content-around h-100">
+            <div class="d-flex flex-column text-white text-justify">
+                <span class="font-weight-bold">Zapraszamy</span>
+                <span>Zadzwoń, zarezerwuj i przyjedź do Łeby. Jesteśmy dostępni przez telefon, Booking oraz
+                    Airbnb.</span>
+            </div>
+            <div class="d-flex flex-column text-white">
+                <span class="font-weight-bold">Odwiedź również:</span>
+                <a class="noSelect text-white" href="http://www.lebskiechatki.pl">www.lebskiechatki.pl - Domki dla całej
+                    rodziny.</a>
+                <a class="noSelect text-white" href="http://www.asartceramika.pl">www.asartceramika.pl - Piękna
+                    ceramika</a>
+            </div>
         </div>
     </div>
-    <div id="map">
-            <div class="mapouter">
-                <div class="gmap_canvas">
-                    <iframe width="100%" height="100%" src="https://maps.google.com/maps?q=Agra%20Zielony%20Ogr%C3%B3d+(Zielony%20Ogr%C3%B3d)&amp;ie=UTF8&amp;t=&amp;z=11&amp;iwloc=B&amp;output=embed" frameborder="0" scrolling="no"></iframe>
-                </div>
-                <style>.mapouter{text-align:right;height:100%;width:100%;}.gmap_canvas {overflow:hidden;background:none!important;height:100%;width:100%;}</style>
-        </div> 
+    <div id="map" [ngClass]="(this.app.home)?'col-md-12':'col-md-8'" class="col-sm-12">
+        <div class="mapouter">
+            <div class="gmap_canvas">
+                <iframe width="100%" height="100%"
+                    src="https://maps.google.com/maps?q=Agra%20Zielony%20Ogr%C3%B3d+(Zielony%20Ogr%C3%B3d)&amp;ie=UTF8&amp;t=&amp;z=11&amp;iwloc=B&amp;output=embed"
+                    frameborder="0" scrolling="no"></iframe>
+            </div>
+        </div>
     </div>
 </div>
-<footer class="column">
-<div id="copyright">Wszystkie prawa zastrzeżone © Zielony Ogród 2019</div>
-<div id="small_menu" class="row">
-        <a class="noSelect" href="gallery.html">Galeria</a>
-        <a class="noSelect" href="index.html">Start</a>
-        <a class="noSelect" href="contact.html">Kontakt</a>
-</div>
+<footer class="d-flex flex-column align-items-center py-4 text-light text-center">
+    <small>
+        <div id="copyright">Wszystkie prawa zastrzeżone © Zielony Ogród 2021</div>
+        <div id="small_menu" class="d-flex pt-3 text-center justify-content-between">
+            <a class="user-select-none text-light w-100" routerLink="/gallery">Galeria</a>
+            <a class="user-select-none text-light w-100" routerLink="/">Start</a>
+            <a class="user-select-none text-light w-100" routerLink="/contact">Kontakt</a>
+        </div>
+    </small>
 </footer>
