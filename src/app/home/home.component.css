@@ -1,0 +1,16 @@
+#slide_show >img{
+	height: 17em;
+	width:100vw;
+	object-fit: cover;
+	object-position: 50% 30%;
+	/*box-shadow:0 0.1em 0.2em black;*/
+	box-shadow:0 0.05em 0.3em black;
+	
+}
+@media only screen and (min-width: 900px) {
+
+#slide_show img {
+	width:100vw;
+	height: auto;
+}
+}

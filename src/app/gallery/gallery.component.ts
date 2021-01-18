@@ -40,14 +40,14 @@ export class GalleryComponent implements OnInit, AfterViewInit {
   ngAfterViewInit() {
     let tmp = this
     $("#prev").click(function () {
-      $('#prev').attr("disabled", true);
+      $('#prev').attr("disabled", 1);
       tmp.prevImage();
-      setTimeout(function () { $('#prev').attr("disabled", false); }, 250);
+      setTimeout(function () { $('#prev').removeAttr( "disabled" );}, 250);
     });
     $("#next").click(function () {
-      $('#next').attr("disabled", true);
+      $('#next').attr("disabled", 1);
       tmp.nextImage();
-      setTimeout(function () { $('#next').attr("disabled", false); }, 250);
+      setTimeout(function () { $('#next').removeAttr( "disabled" );}, 250);
     });
   }
 
