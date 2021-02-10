@@ -1,16 +1,16 @@
-<nav class="navbar navbar-expand-lg navbar-light nav-agra">
+<nav  [ngClass]="(this.app.home)?'nav-home-agra':'nav-agra'" class="navbar navbar-expand-lg navbar-light">
     <a href="tel:+48609474272" class="font-weight-bold user-select-none text-dark">+48 609 474 272</a>
     <span class="navbar-toggler nav-toggler-agra" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">≡</span>
     <div #navlist class="collapse navbar-collapse mr-2" id="navbarNav">
-      <ul class="navbar-nav ml-auto font-weight-bold">
+      <ul class="navbar-nav font-weight-bold">
         <li class="nav-item active">
-          <a (click)="showHideNav()" class="nav-link" routerLink="/">Start</a>
+          <a (click)="hideNav()" class="nav-link" routerLink="/">Zielony Ogród</a>
         </li>
         <li class="nav-item active">
-          <a (click)="showHideNav()" class="nav-link" routerLink="/gallery">Galeria</a>
+          <a (click)="hideNav()" class="nav-link" routerLink="/gallery">Galeria</a>
         </li>
         <li class="nav-item active">
-          <a (click)="showHideNav()" class="nav-link" routerLink="/contact">Kontakt</a>
+          <a (click)="hideNav()" class="nav-link" routerLink="/contact">Kontakt</a>
         </li>
       </ul>
     </div>

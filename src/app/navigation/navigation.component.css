@@ -1,13 +1,52 @@
-.nav-agra{
+.nav-agra,.nav-home-agra{
     background:rgba( 255, 255, 255, .8);
     position:fixed;
     width: 100vw;
     font-size: 1.1em;
     box-shadow:0 0 0.3em black;
     z-index: 100;
+    transition: padding 0.5s;
 }
 .nav-toggler-agra{
     cursor: pointer;
     border: none;
     font-size: 2em;
+}
+@media only screen and (min-width: 992px) {
+    .nav-home-agra{
+        background:rgba( 255, 255, 255, .5);
+        position:fixed;
+        width: 100vw;
+        padding: 0.7em;
+        font-size: 1.2em;
+        box-shadow:0 0 0.3em black;
+        z-index: 100;
+        
+    }
+    .nav-home-agra>a{
+        display: none;
+    }
+    .nav-agra>*>.navbar-nav{
+        margin-left: auto;
+    }
+    .nav-home-agra>*>.navbar-nav{
+        display: flex;
+        width: 100%;
+        justify-content: center;
+    }
+    .nav-home-agra>*>.navbar-nav>*{
+        margin: 0 20px;
+    }
+    .nav-home-agra>*>.navbar-nav>*>a{
+        font-size: 1.2em;
+        font-family: 'Cormorant', sans-serif;
+    }
+    .nav-home-agra>*>.navbar-nav>*:nth-child(1){
+       order:2;
+    }
+    .nav-home-agra>*>.navbar-nav>*:nth-child(3){
+        order:3;
+     }
+   
+    
 }

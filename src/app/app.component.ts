@@ -1,4 +1,5 @@
 import { Component } from '@angular/core'
+import * as $ from "jquery"
 
 @Component({
   selector: 'app-root',
@@ -8,5 +9,10 @@ import { Component } from '@angular/core'
 
 export class AppComponent {
   home:boolean = false
+
+  scrollTop(){
+    $("html, body").animate({ scrollTop: 0 });
+  }
 }
+
 

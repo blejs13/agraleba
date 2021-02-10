@@ -1,11 +1,7 @@
-/*for max 991px*/
 *{
-	/* box-sizing: border-box; */
 	margin:0;
 	padding:0;
-	/*border:1px solid black; border:1px solid black; */
-	font-family: 'Cormorant', sans-serif;
-	font-size: 1.02em;
+	font-family: 'Lora', serif;
 }
 #page-wrapper{
 	background: white;

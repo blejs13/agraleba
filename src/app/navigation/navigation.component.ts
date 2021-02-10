@@ -1,5 +1,6 @@
 import { Component, OnInit, Renderer2, TemplateRef, ViewChild, ViewContainerRef, ViewRef } from '@angular/core'
 import * as $ from "jquery"
+import { AppComponent } from '../app.component'
 
 @Component({
   selector: 'app-navigation',
@@ -8,13 +9,15 @@ import * as $ from "jquery"
 })
 export class NavigationComponent implements OnInit {
 
-  constructor(private renderer:Renderer2) { }
+  constructor(private renderer:Renderer2,
+              public app:AppComponent) { }
 
   ngOnInit(): void {}
 
   @ViewChild('navlist') navlist
-  showHideNav(){
+  hideNav(){
     this.renderer.removeClass(this.navlist.nativeElement,"show") 
+    this.app.scrollTop()
   }
 
 

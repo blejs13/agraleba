@@ -12,7 +12,7 @@
 </div>
 <div #links id="links" class="row">
     <div class="col-sm-12 col-md-4">
-        <div *ngIf="!this.app.home" class=" d-flex flex-column p-4 justify-content-around h-100">
+        <div *ngIf="!this.app.home" class=" d-flex flex-column p-3  justify-content-around h-100">
             <div class="d-flex flex-column text-white text-justify">
                 <span class="font-weight-bold">Zapraszamy</span>
                 <span>Zadzwoń, zarezerwuj i przyjedź do Łeby. Jesteśmy dostępni przez telefon, Booking oraz
@@ -41,9 +41,9 @@
     <small>
         <div id="copyright">Wszystkie prawa zastrzeżone © Zielony Ogród 2021</div>
         <div id="small_menu" class="d-flex pt-3 text-center justify-content-between">
-            <a class="user-select-none text-light w-100" routerLink="/gallery">Galeria</a>
-            <a class="user-select-none text-light w-100" routerLink="/">Start</a>
-            <a class="user-select-none text-light w-100" routerLink="/contact">Kontakt</a>
+            <a (click)="app.scrollTop()" class="user-select-none text-light w-100" routerLink="/gallery">Galeria</a>
+            <a (click)="app.scrollTop()" class="user-select-none text-light w-100" routerLink="/">Start</a>
+            <a (click)="app.scrollTop()" class="user-select-none text-light w-100" routerLink="/contact">Kontakt</a>
         </div>
     </small>
 </footer>
