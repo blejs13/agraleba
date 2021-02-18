@@ -1,3 +1,10 @@
+#navbarNav{
+    z-index: 1;
+}
+.navlogo > a{
+    display: inline-block;
+
+}
 .nav-agra,.nav-home-agra{
     background:rgba( 255, 255, 255, .8);
     position:fixed;
@@ -12,7 +19,32 @@
     border: none;
     font-size: 2em;
 }
+
+#navlogo{
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 0;
+    width: 100%;
+    display: flex;
+    justify-content: center; 
+}
+#navlogo img{
+    position: relative;
+    top: 0.15em;
+    left: 0;
+height: 3.1em;
+opacity: 0.8;
+transition: height 0.5s;
+}
+
 @media only screen and (min-width: 992px) {
+    .nav-home-agra>#navlogo img{
+        height: 3.9em;
+    }
+    .nav-agra>#navlogo img{
+        z-index: 2;
+    }
     .nav-home-agra{
         background:rgba( 255, 255, 255, .5);
         position:fixed;

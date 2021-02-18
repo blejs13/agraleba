@@ -1,24 +1,30 @@
-<nav  [ngClass]="(this.app.home)?'nav-home-agra':'nav-agra'" class="navbar navbar-expand-lg navbar-light">
-    <a href="tel:+48609474272" class="font-weight-bold user-select-none text-dark">+48 609 474 272</a>
-    <span class="navbar-toggler nav-toggler-agra" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">≡</span>
-    <div #navlist class="collapse navbar-collapse mr-2" id="navbarNav">
-      <ul class="navbar-nav font-weight-bold">
-        <li class="nav-item active">
-          <a (click)="hideNav()" class="nav-link" routerLink="/">Zielony Ogród</a>
-        </li>
-        <li class="nav-item active">
-          <a (click)="hideNav()" class="nav-link" routerLink="/gallery">Galeria</a>
-        </li>
-        <li class="nav-item active">
-          <a (click)="hideNav()" class="nav-link" routerLink="/contact">Kontakt</a>
-        </li>
-      </ul>
-    </div>
-  </nav>
+<nav [ngClass]="(this.app.home)?'nav-home-agra':'nav-agra'" class="navbar navbar-expand-lg navbar-light">
+  <a href="tel:+48609474272" class="font-weight-bold user-select-none text-dark">+48 609 474 272</a>
+  <span class="navbar-toggler nav-toggler-agra" data-toggle="collapse" data-target="#navbarNav"
+    aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">≡</span>
+  <div id="navlogo">
+    <a (click)="hideNav()" class="" routerLink="/">
+      <img src="../../assets/logo/agra_logo_s.png" alt="logo">
+    </a>
+  </div>
+  <div #navlist class="collapse navbar-collapse mr-2" id="navbarNav">
+    <ul class="navbar-nav font-weight-bold">
+      <li class="nav-item active">
+        <a (click)="hideNav()" class="nav-link" routerLink="/">Zielony Ogród</a>
+      </li>
+      <li class="nav-item active">
+        <a (click)="hideNav()" class="nav-link" routerLink="/gallery">Galeria</a>
+      </li>
+      <li class="nav-item active">
+        <a (click)="hideNav()" class="nav-link" routerLink="/contact">Kontakt</a>
+      </li>
+    </ul>
+  </div>
+</nav>
 
 
 
 <!-- test -->
 <ng-template #template>
-    <h2>You cant see mee</h2>
+  <h2>You cant see mee</h2>
 </ng-template>
